@@ -4,7 +4,7 @@
       background-blend-mode: multiply;color: whitesmoke;  
       width: 100%; width: 100vw;object-fit: cover;}
 
-.main {max-width: 960px;background-image: url(woods.jpg);}
+.main {max-width: 900px;background-image: url(woods.jpg);}
  img{display: block; object-fit: cover; width: 100%;}
 
 #quotor, #spanz {margin-left: 4em;}
