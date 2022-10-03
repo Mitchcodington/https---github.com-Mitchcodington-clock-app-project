@@ -23,7 +23,7 @@ const m = new Date();
 document.getElementById("min").innerHTML = m.getMinutes(); 
 
 let hours = document.getElementById("hour").innerHTML
-if (min < 10) {
+if (m.getMinutes() < 10) {
     document.getElementById("min").innerHTML ="0" + m.getMinutes()
 }
 if(hours < 12){
