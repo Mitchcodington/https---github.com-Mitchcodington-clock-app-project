@@ -7,7 +7,6 @@ const minEl = document.getElementById("min")
 const mainEl = document.getElementById("main")
 const bodyEl = document.getElementById('body')
 
-
 fetch('https://api.quotable.io/random')
 .then(response => response.json())
 .then((data) =>{
@@ -24,9 +23,11 @@ const m = new Date();
 document.getElementById("min").innerHTML = m.getMinutes(); 
 
 let hours = document.getElementById("hour").innerHTML
-
+if (min < 10) {
+    document.getElementById("min").innerHTML ="0" + m.getMinutes()
+}
 if(hours < 12){
-document.getElementById("greet").innerHTML =  'MORNING,'
+document.getElementById("greet").innerHTML =  '<img id="mood"  style="width:20px; " src="light.png"><span id="good">GOOD MORNING,</span>'
 }
 else if(hours < 18){
 document.getElementById("greet").innerHTML =
@@ -37,7 +38,6 @@ document.getElementById("greet").innerHTML =
  '<img id="mood" style="width:20px;" src="dark.png"><span id="good">GOOD EVENING,</span>'
 }		  
 }
-
 hourly()
  
  
